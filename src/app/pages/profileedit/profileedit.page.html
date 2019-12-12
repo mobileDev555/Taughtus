@@ -1,0 +1,418 @@
+<ion-header>
+    <ion-toolbar>
+      <!-- =============================== arrow and love icon -->
+      <div style="display: flex; flex-direction: row; justify-content: center; padding: 15px;" class="main_color">
+        <ion-icon name="arrow-back" routerLink="/tabs" style="color: #87c2c5; font-size: 30px;"></ion-icon>
+        <ion-title style="margin-left: 5% !important; font-size: 15px;">PERSONAL/PROFILE INFORMATION</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>  
+    <!-- ===========================  profile information -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
+      <ion-label style="font-size: 25px; margin-left: 15px;margin-top: 15px; " class="main_color1">Profile information</ion-label> 
+      <ion-label style="font-size: 15px; margin-left: 15px;margin-top: 5px; " class="main_color2">
+        Filling out your profile will help to sell your services,
+        and/or your company, to other users and help prove  your legitimacy and professionalism
+      </ion-label> 
+
+      <div style="margin: 20px !important; display: flex; flex-direction: column; align-content: center;">
+          <div> 
+            <!-- ============================= full name -->
+            <ion-label style="font-size: 20px !important; margin-left: 10px;" class="main_color">Full name*</ion-label>
+            <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+              <ion-input [(ngModel)]="username" autofocus="true" type="text" ngModel required placeholder="[John Doe]">
+              </ion-input>
+            </div>
+            <!-- ============================= user handle -->
+            <div style="margin-top: 15px;"> 
+              <ion-label style="font-size: 20px !important; margin-left: 10px;" class="main_color">User handle</ion-label>
+              <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+                <ion-input [(ngModel)]="userhandel" autofocus="true" type="text" ngModel required placeholder="[John's Marking Strategy]">
+                </ion-input>
+              </div>
+            </div>
+            <!-- ============================= user tag -->
+            <div style="margin-top: 15px;"> 
+              <ion-label style="font-size: 20px !important; margin-left: 10px;" class="main_color">User tag</ion-label>
+              <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+                <ion-input [(ngModel)]="usertag" autofocus="true" type="text" ngModel required placeholder="[@johndoe]">
+                </ion-input>
+              </div>
+            </div>
+    
+            <!-- ================================= email address -->
+            <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color">
+                <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Email address*</ion-label>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <ion-label>HIDE</ion-label>
+                  <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+                </div>
+            </div>
+            <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+              <ion-input [(ngModel)]="username" autofocus="true" type="text" ngModel required placeholder="[johndoe@gmail.com]">
+              </ion-input>
+            </div>
+    
+            <!-- ================================= personal address -->
+            <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color">
+                <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Personal address*</ion-label>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                  <ion-label>HIDE</ion-label>
+                  <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+                </div>
+            </div>
+            <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+              <ion-input [(ngModel)]="username" autofocus="true" type="text" ngModel required placeholder="[Search for your mailing address...]">
+              </ion-input>
+            </div>
+            <!-- ================================= or manually -->
+            <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color">
+                <ion-label style="font-size: 15px !important; margin-left: 10px; margin-top: 5px;" >Or enter it manually here</ion-label>
+            </div>
+            <!-- ================================= house/ building number -->
+            <div style="margin: 0px;display: flex; flex-direction: row; font-size: 10px; margin-top: 20px;" class="main_color1">
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <ion-label>HOUSE/UNIT NUMBER</ion-label>
+                    <ion-input [(ngModel)]="phoneNumber" placeholder="00" type="number" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 50% !important; font-size: 20px;"></ion-input>
+                  
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 15px;">
+                  <ion-label>BUILDING NUMBER <br/>(IF APPLICIBLE)</ion-label>
+                  <ion-input [(ngModel)]="phoneNumber" type="number" placeholder="000" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 50% !important; font-size: 20px;"></ion-input>
+                </div>
+            </div>
+            
+            <!-- ================================= street name -->
+            <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+                <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                    <ion-label>Stree Name</ion-label>
+                    <ion-input [(ngModel)]="street" placeholder="Main street" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+                </div>
+            </div>
+          </div>
+            
+          <!-- ================================= city -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                  <ion-label>City</ion-label>
+                  <ion-input [(ngModel)]="city" placeholder="London" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+              </div>
+          </div>
+            
+          <!-- ================================= country -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                  <ion-label>Country</ion-label>
+                  <ion-input [(ngModel)]="country" placeholder="United Kindom" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+              </div>
+          </div>
+            
+          <!-- ================================= postal code -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                  <ion-label>Post code/Zip code</ion-label>
+                  <ion-input [(ngModel)]="post_code" placeholder="XXX XXX" type="number" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+              </div>
+          </div>
+          
+          <!-- ================================= mobile number -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Mobile number*</ion-label>
+              <div style="display: flex; flex-direction: row; align-items: center;">
+                <ion-label>HIDE</ion-label>
+                <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+              </div>
+          </div>
+          <!-- ================================= area code/ mobile number -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <ion-label>AREA CODE</ion-label>
+                <ion-select style="border-bottom: 1px solid #007278; width: 100px !important; font-size: 20px;">
+                  <ion-select-option value="0">+1</ion-select-option>
+                  <ion-select-option value="1">+44</ion-select-option>
+                  <ion-select-option value="2">+856</ion-select-option>
+                </ion-select>
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: center; margin-left: 15px;">
+                <ion-label>MOBILE NUMBER</ion-label>
+                <ion-input [(ngModel)]="phoneNumber" type="number" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;"></ion-input>
+              </div>
+          </div>
+          <!-- ================================= personal website -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Personal website</ion-label>
+              <div style="display: flex; flex-direction: row; align-items: center;">
+                <ion-label>HIDE</ion-label>
+                <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+              </div>
+          </div>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+            <ion-input [(ngModel)]="website" autofocus="true" type="text" ngModel required placeholder="[http://johndoe.com]">
+            </ion-input>
+          </div>
+          
+          <!-- //=====================  welcome -->
+          <div style="display: flex; flex-direction: column; align-content: center;margin-top: 30px;">
+            <div>
+              <ion-label style="font-size: 20px !important;" class="main_color1">Profile type</ion-label>
+            </div>
+            <ion-label style="font-size: 15px !important; margin-top: 20px;" class="main_color1">
+                Taughtus is a platform that allows users to either advertise themselves as professional
+                trainers, or to hire others to do training for them.
+            </ion-label>      
+          </div>
+          
+          <!-- ================================= company name -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Company name</ion-label>
+              <div style="display: flex; flex-direction: row; align-items: center;">
+                <ion-label>HIDE</ion-label>
+                <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+              </div>
+          </div>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+            <ion-input [(ngModel)]="com_name" autofocus="true" type="text" ngModel required placeholder="[johndoe.company]">
+            </ion-input>
+          </div>
+          <!-- ================================= company website -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Company website</ion-label>
+              <div style="display: flex; flex-direction: row; align-items: center;">
+                <ion-label>HIDE</ion-label>
+                <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+              </div>
+          </div>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+            <ion-input [(ngModel)]="com_website" autofocus="true" type="text" ngModel required placeholder="[http://johndoe.com]">
+            </ion-input>
+          </div>
+          <!-- ================================= company address -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Company address</ion-label>
+              <div style="display: flex; flex-direction: row; align-items: center;">
+                <ion-label>HIDE</ion-label>
+                <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+              </div>
+          </div>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+            <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Search for your company address">
+            </ion-input>
+          </div>
+          <!-- ================================= or manually -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 15px !important; margin-left: 10px; margin-top: 5px;" >Or enter it manually here :</ion-label>
+          </div>
+          <!-- ================================= house/ building number -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 10px; margin-top: 20px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                  <ion-label>HOUSE/UNIT NUMBER</ion-label>
+                  <ion-input [(ngModel)]="phoneNumber" placeholder="00" type="number" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 50% !important; font-size: 20px;"></ion-input>
+                
+              </div>
+              <div style="display: flex; flex-direction: column; align-items: flex-start; margin-left: 15px;">
+                <ion-label>BUILDING NUMBER <br/>(IF APPLICIBLE)</ion-label>
+                <ion-input [(ngModel)]="phoneNumber" type="number" placeholder="000" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 50% !important; font-size: 20px;"></ion-input>
+              </div>
+          </div>
+          
+          <!-- ================================= street name -->
+          <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+              <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                  <ion-label>Stree Name</ion-label>
+                  <ion-input [(ngModel)]="street" placeholder="Main street" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+              </div>
+          </div>
+          
+        <!-- ================================= city -->
+        <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                <ion-label>City</ion-label>
+                <ion-input [(ngModel)]="city" placeholder="London" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+            </div>
+        </div>
+          
+        <!-- ================================= country -->
+        <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                <ion-label>Country</ion-label>
+                <ion-input [(ngModel)]="country" placeholder="United Kindom" type="text" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+            </div>
+        </div>
+          
+        <!-- ================================= postal code -->
+        <div style="margin: 0px;display: flex; flex-direction: row; font-size: 15px; margin-top: 30px;" class="main_color1">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+                <ion-label>Post code/Zip code</ion-label>
+                <ion-input [(ngModel)]="post_code" placeholder="XXX XXX" type="number" ngModel required style="border-bottom: 1px solid #007278; height: 40px; width: 100% !important; font-size: 20px;margin-top: 10px;"></ion-input>                  
+            </div>
+        </div>
+        <!-- ================================= your industry/specialty -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Your industry / specialty*</ion-label>
+        </div>
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+          <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Search for your company address">
+          </ion-input>
+        </div>
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+          <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Search for your company address">
+          </ion-input>
+        </div>
+      </div>
+
+
+      <!-- ================================= SUB-1 -->
+      <div style="display: flex; flex-direction: row; justify-content: space-between; background: #639ea0; color: #ffffff; height: 50px;">
+          <ion-label style="font-size: 12px !important; margin-left: 10px; margin-top: 10px !important; padding: 10px;" >Add Another Sub-category</ion-label>
+          <ion-icon name="add-circle-outline" style="color: #ffffff; font-size: 40px; padding: 5px;"></ion-icon>
+      </div>
+      <!-- ================================= SUB-2 -->
+      <div style="display: flex; flex-direction: row; justify-content: space-between; background: #004750; color: #ffffff; height: 50px;">
+          <ion-label style="font-size: 12px !important; margin-left: 10px; margin-top: 10px !important; padding: 10px;" >Add Another Industry</ion-label>
+          <ion-icon name="add-circle-outline" style="color: #ffffff; font-size: 40px; padding: 5px;"></ion-icon>
+      </div>
+
+
+      <div style="margin: 20px !important; display: flex; flex-direction: column; align-content: center;">
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">
+          <ion-select interface="popover" ngModel name="unit" required>
+            <ion-select-option value="bottle">Bottle</ion-select-option>
+            <ion-select-option value="litre">Litre</ion-select-option>
+            <ion-select-option value="gram">Gram</ion-select-option>
+            <ion-select-option value="metre">Metre</ion-select-option>
+            <ion-select-option value="pair">Pair</ion-select-option>
+          </ion-select>
+        </div>
+        <!-- ====================================== language  -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Language*</ion-label>
+        </div>
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">
+          <ion-select interface="popover" ngModel name="unit" required>
+            <ion-select-option value="0">English</ion-select-option>
+            <ion-select-option value="1">Russian</ion-select-option>
+            <ion-select-option value="2">Japan</ion-select-option>
+            <ion-select-option value="3">Franch</ion-select-option>
+          </ion-select>
+        </div>
+        <!-- ================================= my mates -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >My rate(s)</ion-label>
+            <div style="display: flex; flex-direction: row; align-items: center;">
+              <ion-label>HIDE</ion-label>
+              <ion-toggle [(ngModel)]="pepperoni" color="secondary"></ion-toggle>
+            </div>
+        </div>
+        <!-- ================================= your bio -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Your bio</ion-label>
+        </div>
+        <div style="margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8; padding: 5px;">            
+          <ion-textarea rows="6" [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Introduce yourself, talk about your professional backgound">
+          </ion-textarea>
+        </div>
+        <!-- ================================= offers -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Offers</ion-label>
+        </div>
+        <div style="margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8; padding: 5px;">            
+          <ion-textarea rows="6" [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="You can include an offer to incentivise users to try your services">
+          </ion-textarea>
+        </div>
+        <!-- //=====================================  Radio button -->
+        <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+            <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Add images to your profile</ion-label>
+        </div>
+        <div style="display: flex; flex-direction: column; align-content: center;margin-top: 20px;">
+            <ion-list>
+              <ion-radio-group>          
+                <ion-item lines="none">
+                  <div style="display: flex; flex-direction: column; align-content: space-around; margin-top: 0px;">
+                    <ion-label style="color: #007278;">Add a gallery of images</ion-label>
+                  </div>
+                  <ion-radio slot="start" value="biff"></ion-radio>
+                </ion-item>            
+                <ion-item lines="none">
+                  <div style="display: flex; flex-direction: column; align-content: space-around; margin-top: 0px;">
+                    <ion-label style="color: #007278;">Add large full screen image(s)</ion-label>
+                  </div>
+                  <ion-radio slot="start" value="griff"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+        </div>
+      </div>
+      <!-- ================================= SUB-1 -->
+      <div style="display: flex; flex-direction: row; justify-content: space-between; background: #639ea0; color: #ffffff; height: 50px;">
+          <ion-label style="font-size: 12px !important; margin-left: 10px; margin-top: 10px !important; padding: 10px;" >Add Another Sub-category</ion-label>
+          <ion-icon name="folder" style="color: #ffffff; font-size: 40px; padding: 5px;"></ion-icon>
+      </div>
+      <!-- ================================= SUB-2 -->
+      <div style="display: flex; flex-direction: row; justify-content: space-between; background: #004750; color: #ffffff; height: 50px;">
+          <ion-label style="font-size: 12px !important; margin-left: 10px; margin-top: 10px !important; padding: 10px;" >Add Another Industry</ion-label>
+          <ion-icon name="add-circle-outline" style="color: #ffffff; font-size: 40px; padding: 5px;"></ion-icon>
+      </div>
+
+
+      
+      <div style="margin: 20px !important; display: flex; flex-direction: column; align-content: center;">
+
+          <!-- ================================= give your image -->
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; margin-top: 20px;" class="main_color1">
+              <ion-label style="font-size: 20px !important; margin-left: 10px; margin-top: 5px;" >Give your images a title</ion-label>
+          </div>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+            <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="[My training portfolio]">
+            </ion-input>
+          </div>
+    
+          <!-- ==============================  agree radio  -->
+          <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 30px;">
+            <ion-checkbox color="secondary"></ion-checkbox>
+            <ion-label style="color: #007278; margin-left: 10px;">I agree to Taughtus’ terms of use</ion-label>
+          </div>
+    
+          <!-- ================================== finish registering button -->
+          <div style="margin-top: 30px;"><ion-label color="danger">{{err_msg}}</ion-label></div>
+          <ion-button class="round-btn" routerLink="/registersuccess" style="height: 50px;">Save Changes</ion-button>
+          <div style="margin: 0px;display: flex; flex-direction: row; justify-content: center; font-size: 12px;">
+            <ion-label style="color: gray; margin-top: 20px;">
+                Any hidden content won’t be shown publicly, but relevant hidden information, 
+                like your name or address of a job you posted, will be accessible to the trainer you assign, 
+                after you assign your job to them. Similarly, if you’re a trainer, hidden information will not be shown in your profile, 
+                but relevant hidden information will be visible, to a job owner, only after you’re assigned to their job.
+            </ion-label>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+
+
+    <ion-toolbar>
+      <ion-tabs>
+          <ion-tab-bar slot="bottom">
+            <ion-tab-button routerLink="/tabs">
+              <ion-icon name="home"></ion-icon>
+              <ion-label>Home</ion-label>
+            </ion-tab-button>
+            <ion-tab-button routerLink="/tabs/tabs/tabtrainer">
+              <ion-icon name="person"></ion-icon>
+              <ion-label>Trainers</ion-label>
+            </ion-tab-button>
+            <ion-tab-button routerLink="/tabs/tabs/tabjob">
+              <ion-icon name="search"></ion-icon>
+              <ion-label>Jobs</ion-label>
+            </ion-tab-button>
+            <ion-tab-button routerLink="/tabs/tabs/tabmsg">
+              <ion-icon name="mail"></ion-icon>
+              <ion-label>Messages</ion-label>
+            </ion-tab-button>
+            <ion-tab-button routerLink="/tabs/tabs/tabmore">
+              <ion-icon name="settings"></ion-icon>
+              <ion-label>More</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        </ion-tabs>
+      </ion-toolbar>

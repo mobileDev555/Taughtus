@@ -1,0 +1,28 @@
+ion-content{
+    --background: #ccc url('../../../assets/img/bg.png') no-repeat center center/cover;
+}
+.grey_color {
+    background-color: #f6f5f3 !important;
+}
+
+.white_color {
+    background-color: #ffffff !important;
+}
+.main_color1 {
+    color: #007278 !important;
+    font-weight: bold;
+}
+.main_color2 {
+    color: #1f8185 !important;
+}
+.main_color {
+    color: #004750 !important;
+}
+.round-btn {
+    --border-radius: 30px!important;
+}
+.round-btn1 {
+    --border-radius: 30px!important;
+    --background:#187f85 !important;
+    color: #ffffff;
+}

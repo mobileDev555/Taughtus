@@ -1,0 +1,7 @@
+{
+  "name": "TaughtusApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

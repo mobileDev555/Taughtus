@@ -1,0 +1,250 @@
+<ion-header>
+    <ion-toolbar>
+      <!-- =============================== arrow and love icon -->
+      <div style="display: flex; flex-direction: row; justify-content: center; padding: 15px;" class="main_color">
+        <ion-icon name="arrow-back" routerLink="/tabs" style="color: #87c2c5; font-size: 30px;"></ion-icon>
+        <ion-title style="margin-left: 25% !important; font-size: 20px;">SETTINGS</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <!-- ===========================  General -->
+  <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px; margin-right: 20px;"> 
+      <ion-label style="font-size: 30px; margin-left: 15px; margin-top: 15px; " class="main_color1">General</ion-label> 
+      <ion-label style="font-size: 25px; margin-left: 15px; margin-top: 15px; " class="main_color1">Account settings</ion-label> 
+      <ion-list>  
+        <ion-item line>   
+            <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">
+              Personal information<p>update your name, contact details, language and profile details</p>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line>   
+          <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">
+            Payments<p>Manage your payment settins and see your payment history</p>
+          </ion-label>  
+          <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+
+        <ion-item lines="none">   
+          <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">
+            Notificaitons<p>Turn on notifications to be notified of activity relevant to you</p>
+          </ion-label>  
+          <ion-toggle [(ngModel)]="first1" color="secondary"></ion-toggle>
+        </ion-item>  
+        <ion-item line>
+            <div style="display: flex; flex-direction: row; align-items: center;" class="main_color">       
+                <ion-row> 
+                  <ion-col col-4>
+                    <ion-item lines="none">
+                      <ion-checkbox slot="" value="0" checked></ion-checkbox>
+                      <ion-label style="color: #007278; margin-left: 5px;">Email</ion-label>
+                    </ion-item>
+                  </ion-col>
+              
+                  <ion-col col-4>
+                    <ion-item lines="none">
+                      <ion-checkbox value="1"></ion-checkbox>
+                      <ion-label style="color: #007278; margin-left: 5px;">SMS</ion-label>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col col-4>
+                    <ion-item lines="none">
+                      <ion-checkbox value="2"></ion-checkbox>
+                      <ion-label style="color: #007278; margin-left: 5px;">Notifications</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+        
+        <ion-item lines="none">   
+          <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">
+            Emails<p>Turn on to receive emails from Taughtus</p>
+          </ion-label>  
+          <ion-toggle [(ngModel)]="first2" color="secondary"></ion-toggle>
+        </ion-item>  
+        <ion-item line>
+            <div style="display: flex; flex-direction: row; align-content: center;" class="main_color">       
+                <ion-row> 
+                  <ion-col>
+                    <ion-item lines="none">
+                      <ion-checkbox value="0" checked></ion-checkbox>
+                      <ion-label style="color: #007278; margin-left: 5px;">Taughtus</ion-label>
+                    </ion-item>
+                  </ion-col>              
+                  <ion-col>
+                    <ion-item lines="none">
+                      <ion-checkbox value="1" checked></ion-checkbox>
+                      <ion-label style="color: #007278; margin-left: 5px;">Recommended jobs</ion-label>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+        
+        <ion-item lines="none">   
+          <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">
+            Turn on unpaid invoice auto-reminders<p>Unpaid invoice auto-reminders will automatically send a reminder notificatins</p>
+          </ion-label>  
+          <ion-toggle [(ngModel)]="first3" color="secondary"></ion-toggle>
+        </ion-item>  
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px; width: 80%; margin-left: 10%;">
+          <ion-select interface="popover" ngModel name="unit" required style="width: 100%;">
+            <ion-select-option value="0">1</ion-select-option>
+            <ion-select-option value="1">2</ion-select-option>
+            <ion-select-option value="2">5</ion-select-option>
+            <ion-select-option value="3">10</ion-select-option>
+          </ion-select>
+        </div>
+      </ion-list>  
+    </div>    
+    <div style="margin-top: 30px;">
+      <img style="width: 100%; height: 10px; background: rgb(238, 237, 237);"/>
+    </div>
+    <div style="margin-right: 20px; margin-left: 20px;">
+      <div style="margin-top: 30px !important; display: flex; flex-direction: column;">
+        <ion-label style="font-size: 25px; margin-left: 10px;" class="main_color1">Privacy</ion-label>  
+        <img style="width: 100%; height: 1px; background: #007278;"/>
+        <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px; margin-top: 10px;" class="main_color1">Privacy settings</ion-label>  
+        <ion-label style="font-size: 12px; margin-left: 10px;margin-right: 10px; margin-top: 10px;">
+          Control what of your personal information is visible publich
+        </ion-label>  
+        <ion-label style="font-size: 12px; margin-left: 10px;margin-top: 10px;" class="main_color1">HIDE : </ion-label>  
+        <div style="display: flex; flex-direction: row;">
+          <div style="display: flex; flex-direction: column;">    
+              <ion-item lines="none">
+                <ion-checkbox value="0"></ion-checkbox>
+                <ion-label style="color: #007278; margin-left: 10px;">Email address</ion-label>
+              </ion-item>          
+              <ion-item lines="none">
+                  <ion-checkbox value="1"></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">Personal address</ion-label>
+              </ion-item>          
+              <ion-item lines="none">
+                  <ion-checkbox value="2"></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">Company name</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                  <ion-checkbox value="3"></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">Company website</ion-label>
+              </ion-item>
+          </div>
+          <div style="display: flex; flex-direction: column;">    
+              <ion-item lines="none">
+                <ion-checkbox value="0" checked></ion-checkbox>
+                <ion-label style="color: #007278; margin-left: 10px;">Phone number</ion-label>
+              </ion-item>          
+              <ion-item lines="none">
+                  <ion-checkbox value="1" checked></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">Personal website</ion-label>
+              </ion-item>          
+              <ion-item lines="none">
+                  <ion-checkbox value="2" checked></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">Company address</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                  <ion-checkbox value="3"></ion-checkbox>
+                  <ion-label style="color: #007278; margin-left: 10px;">My name</ion-label>
+              </ion-item>
+          </div>
+        </div>
+
+        
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">            
+          <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Enter a user handle to use instead of your name*">
+          </ion-input>  
+        </div>
+        <ion-label style="font-size: 12px; margin-left: 10px;margin-right: 10px; margin-top: 10px !important;">
+          Control what of your personal information is visible publich
+        </ion-label> 
+        <img style="width: 100%; height: 1px; background: #007278; margin-top: 10px;"/>
+        
+        <div style="display: flex; flex-direction: row; margin-top: 10px;">
+          <ion-label style="font-size: 15px; " class="main_color1">
+            Allow contacts to see my <br/>personal information
+            <p>Turn on notifications to be notified of activity relevant to you</p>
+          </ion-label>  
+          <ion-toggle [(ngModel)]="last1" color="secondary"></ion-toggle>
+        </div>
+
+        <!-- ======================== turn on approvals for all users -->
+        <img style="width: 100%; height: 1px; background: #007278; margin-top: 10px;"/>        
+        <div style="display: flex; flex-direction: row; margin-top: 10px;">
+          <ion-label style="font-size: 15px; " class="main_color1">
+            Turn on approvas for all users who try to <br/>add you to their contact list
+            <p>Turn on notifications to be notified of activity relevant to you</p>
+          </ion-label>  
+          <ion-toggle [(ngModel)]="last2" color="secondary"></ion-toggle>
+        </div>
+      </div>
+        
+      <div style="margin-top: 30px;">
+        <img style="width: 100%; height: 10px; background: rgb(238, 237, 237);"/>
+      </div>
+  </div>
+
+    <!-- ===========================  Other information -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px; margin-right: 20px; margin-left: 20px;"> 
+        <ion-label style="font-size: 20px; margin-left: 15px; margin-top: 15px; " class="main_color1">Other information</ion-label>
+        <img style="width: 100%; height: 1px; background: #007278; margin-top: 10px;"/>  
+        <ion-list>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px;" class="main_color1">Payments</ion-label>  
+              <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+            <ion-label style="font-size: 15px;" class="main_color1">FAQs</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+            <ion-label style="font-size: 15px;" class="main_color1">Contact us</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+            <ion-label style="font-size: 15px;" class="main_color1">Terms & Conditions</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+            <ion-label style="font-size: 15px;" class="main_color1">Privacy policy</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+            <ion-label style="font-size: 15px;" class="main_color1">Walkthrough the app</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          </ion-item>  
+          <ion-item lines="none">   
+            <ion-label style="font-size: 15px;" class="main_color1">App version 1.0</ion-label>    
+          </ion-item>  
+        </ion-list>  
+    </div>
+
+</ion-content>
+
+
+<ion-toolbar>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button routerLink="/tabs">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/tabs/tabs/tabtrainer">
+            <ion-icon name="person"></ion-icon>
+            <ion-label>Trainers</ion-label>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/tabs/tabs/tabjob">
+            <ion-icon name="search"></ion-icon>
+            <ion-label>Jobs</ion-label>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/tabs/tabs/tabmsg">
+            <ion-icon name="mail"></ion-icon>
+            <ion-label>Messages</ion-label>
+          </ion-tab-button>
+          <ion-tab-button routerLink="/tabs/tabs/tabmore">
+            <ion-icon name="settings"></ion-icon>
+            <ion-label>More</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>

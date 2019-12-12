@@ -1,0 +1,45 @@
+<ion-content>
+    <div style="display: flex; flex-direction: column; align-items: center;"  class="white_color"> 
+        <img src="../../assets/img/logo.png" style="width: 60%; margin-top: 60px;margin-bottom: 50px;">
+    </div>
+
+    <div style="margin: 20px !important; display: flex; flex-direction: column; align-content: center;">
+      <div>
+        <ion-label style="font-size: 20px !important;" class="main_color">Login</ion-label>
+      </div>
+      <div> 
+        <div style="border-bottom: 1px solid green; height: 40px; margin-top: 30px;">            
+          <ion-input [(ngModel)]="username" autofocus="true" type="text" ngModel required placeholder="Enter your email address">
+              <ion-icon name="mail" class="main_color"></ion-icon>
+          </ion-input>
+        </div>
+        <div style="border-bottom: 1px solid green; height: 40px;margin-top: 30px;">
+          <ion-input [(ngModel)]="password" type="password" ngModel required placeholder="Enter your password">              
+              <ion-icon name="lock" class="main_color"></ion-icon>
+          </ion-input>
+        </div>
+        
+        <div style="margin: 30px;display: flex; flex-direction: row; justify-content: center;font-size: 12px;">
+          <ion-label style="border-bottom: 1px solid black;">Forgot your password?</ion-label>
+        </div>
+      </div>
+
+      <div style="margin-top: 0px;"><ion-label color="danger">{{err_msg}}</ion-label></div>
+      <ion-button class="round-btn" routerLink="/tabs" style="height: 50px;">Login</ion-button>
+      <div style="margin: 30px;display: flex; flex-direction: row; justify-content: center;">
+        <img src="../../assets/img/i_in.png" style="margin: 10px;">
+        <img src="../../assets/img/i_f.png" style="margin: 10px;">
+        <img src="../../assets/img/i_m.png" style="margin: 10px;">
+        <img src="../../assets/img/i_t.png" style="margin: 10px;">
+      </div>
+      <div style="margin: 0px;display: flex; flex-direction: row; justify-content: center; font-size: 12px;">
+        <ion-label>Not a member?</ion-label>
+      </div>
+      <div style="margin: 10px;display: flex; flex-direction: row; justify-content: center;">
+        <ion-button class="round-btn1" routerLink="/register1" style="background: #ffffff;border: 2px solid #81ccb8;border-radius: 30px;">Register</ion-button>
+      </div>
+      <div style="margin: 10px;display: flex; flex-direction: row; justify-content: center;">
+        <ion-label style="border-bottom: 1px solid #004750; color: #004750; font-size: 12px;" routerLink="/explain">HOW DOES IT WORK?</ion-label>
+      </div>
+    </div>
+</ion-content>
