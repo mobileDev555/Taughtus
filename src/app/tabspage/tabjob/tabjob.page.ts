@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tabjob',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabjobPage implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
+  goback() {
+    this.location.back();
+  }
   ngOnInit() {
   }
 

@@ -1,9 +1,164 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tabtrainer</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <!-- =============================== arrow and love icon -->
+    <div style="display: flex; flex-direction: column; align-content: center;" class="grey_color"> 
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+          <ion-icon name="arrow-back" (click)="goback()" style="color: #ffffff; font-size: 30px;"></ion-icon>
+          <ion-icon name="heart" style=" font-size: 30px;" class="yellow"></ion-icon>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -40px;">
+          <img src="../../assets/img/user2.png">
+        </div>
+    </div>
+    
+    <!-- ================================= john doe -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #1f8185;"> 
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding-left: 15px; padding-top: 15px;">
+          <ion-label style="color: #ffffff; font-size: 20px;">John Doe</ion-label>
+          <img src="../../assets/img/i_pen1.png" style="margin-right: 20px;" routerLink="/profileedit"> 
+        </div>
+        <div style="display: flex; flex-direction: column; align-content: flex-start;padding-left: 15px;">
+          <ion-label style="color: #ffffff; font-size: 15px;">John’s Marketing Strategy • @johndoe</ion-label>
+          <div style="display: flex; flex-direction: row; align-content: flex-start; margin-top: 10px; margin-bottom: 10px;">
+              <ion-label style="font-size: 15px;" class="yellow">4.2</ion-label>
+              <ion-icon name="star" class="yellow"></ion-icon>
+              <ion-icon name="star" class="yellow"></ion-icon>
+              <ion-icon name="star" class="yellow"></ion-icon>
+              <ion-icon name="star" class="yellow"></ion-icon>
+              <ion-icon name="star" class="green_grey"></ion-icon>
+              <ion-label style="font-size: 15px;" class="green_grey">(24)</ion-label>
+          </div>
+        </div>
+    </div>
+    
+    <!-- ========================= review -->
+    <div style="margin-top: 10px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 25px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">20</ion-label>
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Posted Jobs</ion-label>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 25px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">140</ion-label>
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Completed Jobs</ion-label>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 25px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">24</ion-label>
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Reviews</ion-label>
+        </div>
+      </div>        
+    </div>
+    <!-- ========================= review -->
+    <div style="margin-top: 10px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">
+            Hi! My name is John, I'm a creative geek from San Francisco, CA. My background is in website development. 
+            I love to teach others these skills, so let me know if I can be of service to you.
+          </ion-label>
+        </div>
+      </div>        
+    </div>
+    <!-- ========================= my skills -->
+    <div style="margin-top: 10px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">My skills</ion-label>
+        </div>
+        <div style="display: flex; flex-direction: row; margin-top: 10px;">
+          <ion-button class="round-btn1"  style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 12px;">HTML</ion-button>        
+          <ion-button class="round-btn1"  style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 12px;">CSS</ion-button>        
+          <ion-button class="round-btn1"  style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 12px;">JAVA</ion-button>        
+          <ion-button class="round-btn1"  style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 12px;">HTML5</ion-button>        
+        </div>
+      </div>        
+    </div>
+    <!-- ========================= my training portfolio -->
+    <div style="margin-top: 10px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">My training Portfolio</ion-label>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 10px;">
+          <img src="../../../assets/img/portfolio.png">
+        </div>
+      </div>        
+    </div>
+    
+  <!-- ===========================  my courses -->
+  <div style="margin-top: 20px; width: 100% !important;"> 
+    <ion-label style="font-size: 20px; margin-left: 15px;margin-top: 15px; " class="main_color1">My courses</ion-label> 
+    <ion-list lines="none">  
+      <ion-item>     
+        <div style="width: 100% !important; padding-left: 10px;">   
+          <div style="display: flex; flex-direction: row; justify-content: flex-start;">
+              <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 80%;"/>
+              <ion-icon name="bookmark" class="yellow" style="font-size: 30px;"></ion-icon>
+              <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 5%;"/>
+          </div>
 
+          <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;">
+            <ion-label style="font-size: 25px;" class="main_color1">
+                Customer Relationship <br/>Management (CRM)
+            </ion-label>  
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-content: flex-start; margin-top: 10px;">
+              <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
+                  <ion-icon name="pricetag" class="main_color2" style="font-size: 20px;"></ion-icon>
+                  <ion-label style="font-size: 15px; margin-top: 3px; margin-left: 5px !important;" class="main_color2">Sales / Customer Relationships</ion-label>
+              </div>
+              <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px; margin-top: 10px;">
+                  <ion-icon name="calendar" class="main_color2" style="font-size: 20px;"></ion-icon>
+                  <ion-label style="font-size: 15px; margin-left: 5px !important; margin-top: 3px;" class="main_color2">Mar 11-14, 2019</ion-label>
+                  <ion-icon name="clock" class="main_color2" style="font-size: 20px; margin-left: 20%;"></ion-icon>
+                  <ion-label style="font-size: 15px; margin-left: 5px !important; margin-top: 3px;" class="main_color2">9 am to 5 pm</ion-label>
+              </div>
+              <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
+                  <ion-icon name="pin" class="main_color2" style="font-size: 20px;"></ion-icon>
+                  <ion-label style="font-size: 15px; margin-top: 3px; margin-left: 5px !important;" class="main_color2">124 Main St, London, 045 2T7, UK</ion-label>
+              </div>
+          </div>                            
+        </div>
+      </ion-item>  
+    </ion-list>  
+  </div>
+  
+    <!-- ========================= review -->
+    <div style="margin-top: 0px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">
+            The CRM training course offers the tools and techniques to ensure you build and maintain beneficial relationships with customers, 
+            to make them become loyal supporters of your organisation. It also analyses the key components of CRM 
+            and explains how it is integrated within an organisation.
+          </ion-label>
+        </div>
+      </div>        
+    </div>
+    <!-- ====== button     -->
+    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px;">
+      <ion-button class="round-btn1" routerLink="/message" style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 15px;">Message</ion-button>        
+      <ion-button class="round-btn1" routerLink="/coursedetail" style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 15px;">Course Details</ion-button>        
+    </div>
+
+    
+    <!-- ========================= My offers -->
+    <div style="margin-top: 30px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">My offers</ion-label>
+        <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 15px; font-weight: bold;" class="main_color2">First time offer</ion-label>
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 15px;" class="main_color2">
+            I’d like to offer first time clients a free 1 hour webinar course for up to 5 people on HTML5 basics. 
+            In this webinar I will talk about the new capabilities of HTML5. If you book a further session, in person or an e-session,
+            I will offer that session at 10% for those who utalise this offer.
+          </ion-label>
+        </div>
+      </div>        
+    </div>    
+    <!-- ============ button -->
+    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; margin-bottom: 10px;">
+      <ion-button class="round-btn1" routerLink="/message" style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 15px;">Message</ion-button>        
+      <ion-button class="round-btn1" routerLink="/addfavourity" style="border: 1px solid #43a6b3; border-radius: 20px;margin-left: 10px; margin-right: 10px;font-size: 15px;">Add to Favourity</ion-button>        
+    </div>
 </ion-content>

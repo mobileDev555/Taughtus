@@ -71,6 +71,50 @@ const routes: Routes = [
     path: 'profileedit',
     loadChildren: () => import('./pages/profileedit/profileedit.module').then( m => m.ProfileeditPageModule)
   },
+  {
+    path: 'mapdetail',
+    loadChildren: () => import('./pages/mapdetail/mapdetail.module').then( m => m.MapdetailPageModule)
+  },
+  {
+    path: 'phonebook',
+    loadChildren: () => import('./pages/phonebook/phonebook.module').then( m => m.PhonebookPageModule)
+  },
+  {
+    path: 'confirmmsg',
+    loadChildren: () => import('./pages/confirmmsg/confirmmsg.module').then( m => m.ConfirmmsgPageModule)
+  },
+  {
+    path: 'enquiry',
+    loadChildren: () => import('./pages/enquiry/enquiry.module').then( m => m.EnquiryPageModule)
+  },
+  {
+    path: 'policy',
+    loadChildren: () => import('./pages/policy/policy.module').then( m => m.PolicyPageModule)
+  },
+  {
+    path: 'policyprivacy',
+    loadChildren: () => import('./pages/policyprivacy/policyprivacy.module').then( m => m.PolicyprivacyPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
+    path: 'contactus',
+    loadChildren: () => import('./pages/contactus/contactus.module').then( m => m.ContactusPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./pages/faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'mybid',
+    loadChildren: () => import('./pages/mybid/mybid.module').then( m => m.MybidPageModule)
+  },
+  {
+    path: 'paymoney1',
+    loadChildren: () => import('./pages/paymoney1/paymoney1.module').then( m => m.Paymoney1PageModule)
+  },
  
 ];
 

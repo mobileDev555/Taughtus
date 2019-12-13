@@ -1,9 +1,169 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tabjob</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar>
+        <!-- =============================== arrow and love icon -->
+        <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+              <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+              <ion-label style="font-size: 15px;" class="main_color1">JOBS</ion-label>
+            </div>
+        </div>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+<ion-content>    
+    <!-- ========================= want to a advertise -->
+    <div style="margin-top: 20px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Want to advertise a job?</ion-label>
+        <div style="display: flex;flex-direction: column; margin-top: 20px;">
+          <ion-button class="round-btn" routerLink="/message" style="margin-left: 10px; margin-right: 10px;font-size: 15px; height: 50px;">Post a Job</ion-button>        
+        </div>
+      </div>        
+    </div>    
+    <!-- ========================= search job posts -->
+    <div style="margin-top: 20px; display: flex; flex-direction: column;">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Search job posts</ion-label>
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px; margin-left: 10px; margin-right: 10px;">
+          <ion-select interface="popover" ngModel name="unit" required>
+            <ion-select-option value="0">English</ion-select-option>
+            <ion-select-option value="1">Russian</ion-select-option>
+            <ion-select-option value="2">Japan</ion-select-option>
+            <ion-select-option value="3">Franch</ion-select-option>
+          </ion-select>
+        </div>
+        <div style="height: 50px; margin-top: 20px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px; margin-left: 10px; margin-right: 10px;">
+          <ion-select interface="popover" ngModel name="unit" required>
+            <ion-select-option value="0">English</ion-select-option>
+            <ion-select-option value="1">Russian</ion-select-option>
+            <ion-select-option value="2">Japan</ion-select-option>
+            <ion-select-option value="3">Franch</ion-select-option>
+          </ion-select>
+        </div>
+        <div style="display: flex;flex-direction: column; margin-top: 20px;">
+          <ion-button class="round-btn" routerLink="/search" style="margin-left: 10px; margin-right: 10px;font-size: 15px; height: 50px;">Search</ion-button>        
+        </div>
+        <div style="display: flex;flex-direction: row; justify-content: center;  margin-top: 20px;">
+          <ion-label class="main_color1" style="border-bottom: 1px solid #2c948f; font-size: 15px;">Advanced search</ion-label>        
+        </div>
+      </div>        
+    </div>    
+    <!-- ===========================  my jobs -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
+        <ion-label style="font-size: 20px; margin-left: 20px;margin-top: 30px; " class="main_color1">Job search results(24)</ion-label> 
+        <ion-list lines="none">  
+          <ion-item style="margin-top: 20px;">     
+            <div style="display: flex; flex-direction: column; align-content: flex-start; width: 100%;">   
+              <div style="display: flex; flex-direction: row;">
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 2px solid #43a6b3; border-radius: 30px;">
+                    <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+                    <ion-label style="font-size: 12px; margin-left: 10px;">Aug 6-8</ion-label>  
+                  </ion-button>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 50%;"/>
+                  <ion-icon name="bookmark" class="main_color1" style="font-size: 20px; margin-top: 7px;"></ion-icon>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+              </div>
 
+              <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;" routerLink="/myjob">
+                <ion-label style="font-size: 15px;" class="main_color">
+                    Title with character limit. Lorem <br>ipsum dolor sit amet, consectetur adipisicing
+                </ion-label>  
+                <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
+              </div>
+
+              <div style="display: flex; flex-direction: row; margin-top: 15px;"  routerLink="/myjob">
+                <div style="display: flex; flex-direction: row; justify-items: flex-start;">
+                    <img src="../../assets/img/i_user.png" style="margin-right: 5px; width: 40px; height: 40px;"> 
+                    <div style="display: flex; flex-direction: column; align-content: flex-start;">
+                      <ion-label style="font-size: 15px;" class="main_color1">John Doe</ion-label>
+                      <ion-label style="font-size: 12px;">@johndoe•posted 2 days ago</ion-label>
+                      <div style="display: flex; flex-direction: row; align-content: flex-start; margin-top: 10px; margin-bottom: 10px;">
+                          <ion-label style="font-size: 15px;" class="main_color1">4.2</ion-label>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="green_grey"></ion-icon>
+                      </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-content: flex-start; margin-left: 20px;">
+                    <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
+                        <ion-icon name="pin" class="main_color" style="font-size: 20px;"></ion-icon>
+                        <ion-label style="font-size: 12px; margin-top: 3px; margin-left: 5px !important;" class="main_color1">London, UK</ion-label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                        <ion-icon name="pricetag" class="main_color" style="font-size: 20px;"></ion-icon>
+                        <ion-label style="font-size: 12px; margin-left: 5px !important;" class="main_color1">Marketing <br/>Email marketing</ion-label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                        <ion-label style="font-size: 12px; margin-left: 15px;" class="grey_color">JOB0003</ion-label>
+                    </div>
+                </div>                
+              </div>
+            </div>
+          </ion-item>  
+          <ion-item style="margin-top: 20px;">     
+            <div style="display: flex; flex-direction: column; align-content: flex-start; width: 100%;">   
+              <div style="display: flex; flex-direction: row;">
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 2px solid #43a6b3; border-radius: 30px;">
+                    <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+                    <ion-label style="font-size: 12px; margin-left: 10px;">Aug 6-8</ion-label>  
+                  </ion-button>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 50%;"/>
+                  <ion-icon name="bookmark" class="main_color1" style="font-size: 20px; margin-top: 7px;"></ion-icon>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+              </div>
+
+              <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;" routerLink="/myjob">
+                <ion-label style="font-size: 15px;" class="main_color">
+                    Title with character limit. Lorem <br>ipsum dolor sit amet, consectetur adipisicing
+                </ion-label>  
+                <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
+              </div>
+
+              <div style="display: flex; flex-direction: row; margin-top: 15px;"  routerLink="/myjob">
+                <div style="display: flex; flex-direction: row; justify-items: flex-start;">
+                    <img src="../../assets/img/i_user.png" style="margin-right: 5px; width: 40px; height: 40px;"> 
+                    <div style="display: flex; flex-direction: column; align-content: flex-start;">
+                      <ion-label style="font-size: 15px;" class="main_color1">John Doe</ion-label>
+                      <ion-label style="font-size: 12px;">@johndoe•posted 2 days ago</ion-label>
+                      <div style="display: flex; flex-direction: row; align-content: flex-start; margin-top: 10px; margin-bottom: 10px;">
+                          <ion-label style="font-size: 15px;" class="main_color1">4.2</ion-label>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="yellow"></ion-icon>
+                          <ion-icon name="star" class="green_grey"></ion-icon>
+                      </div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-content: flex-start; margin-left: 20px;">
+                    <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
+                        <ion-icon name="pin" class="main_color" style="font-size: 20px;"></ion-icon>
+                        <ion-label style="font-size: 12px; margin-top: 3px; margin-left: 5px !important;" class="main_color1">London, UK</ion-label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                        <ion-icon name="pricetag" class="main_color" style="font-size: 20px;"></ion-icon>
+                        <ion-label style="font-size: 12px; margin-left: 5px !important;" class="main_color1">Marketing <br/>Email marketing</ion-label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                        <ion-label style="font-size: 12px; margin-left: 15px;" class="grey_color">JOB0003</ion-label>
+                    </div>
+                </div>                
+              </div>
+            </div>
+          </ion-item>  
+        </ion-list>  
+
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 30px; margin-bottom: 20px;">
+          <ion-label style="font-size: 12px; border-bottom: 1px solid #2c948f;" class="main_color1">Read more</ion-label>
+        </div>
+    </div>
+
+    
 </ion-content>

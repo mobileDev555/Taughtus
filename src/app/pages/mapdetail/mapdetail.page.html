@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- =============================== arrow and love icon -->
+        <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+              <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+              <ion-label style="font-size: 15px;" class="main_color1">[Location Autofill]</ion-label>
+            </div>
+        </div>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+    <!-- ===================================== job00034        -->
+    <div style="display: flex; flex-direction: column;"> 
+        <img src="../../../assets/img/i_bg_location.png" style=" height: 450px !important;"/>
+        <img src="../../../assets/img/route.png" style="width: 50%; margin-top: -300px; margin-left: 30%;"/>
+    </div>
+
+    <!-- ========================= bottom -->
+    <div style="margin-top: 150px; display: flex; flex-direction: column;">
+      <ion-label style="font-size: 20px; margin-left: 20px !important; margin-top: 20px;" class="main_color1">To 89 Palmspring Way Roseville, CA 39847</ion-label>
+      <div style="display: flex; flex-direction: row; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Time</ion-label>
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">25 min</ion-label>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Distance</ion-label>
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">9.4 mi</ion-label>
+        </div>
+        <div style="display: flex;flex-direction: column;">
+          <ion-label style="font-size: 15px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Method</ion-label>
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color1">Car</ion-label>
+        </div>
+        <ion-icon name="arrow-round-forward" class="main_color2" style="margin-left: 10%; font-size: 35px; margin-top: 10px;"></ion-icon>
+      </div>        
+    </div>
+
+</ion-content>
+
+
+<ion-toolbar>
+  <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/tabs">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/tabs/tabs/tabtrainer">
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Trainers</ion-label>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/tabs/tabs/tabjob">
+          <ion-icon name="search"></ion-icon>
+          <ion-label>Jobs</ion-label>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/tabs/tabs/tabmsg">
+          <ion-icon name="mail"></ion-icon>
+          <ion-label>Messages</ion-label>
+        </ion-tab-button>
+        <ion-tab-button routerLink="/tabs/tabs/tabmore">
+          <ion-icon name="settings"></ion-icon>
+          <ion-label>More</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>

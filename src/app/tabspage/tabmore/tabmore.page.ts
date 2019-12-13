@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-tabmore',
   templateUrl: './tabmore.page.html',
@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabmorePage implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location) { }
 
+  goback() {
+    this.location.back();
+  }
   ngOnInit() {
   }
 

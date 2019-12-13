@@ -1,0 +1,130 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- =============================== arrow and love icon -->
+        <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+              <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+              <ion-label style="font-size: 15px;" class="main_color1">CONTACT</ion-label>
+            </div>
+        </div>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content>
+    <!-- =============================== arrow and love icon -->
+    <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+        <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+          <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+          <ion-label style="font-size: 15px;" class="main_color1">CONTACT</ion-label>
+        </div>
+    </div>
+    <!-- ======================== more options -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
+        <ion-label style="font-size: 20px; margin-left: 15px; margin-top: 15px; " class="main_color1">Frequently asked questions</ion-label> 
+        <ion-list>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">How does Taughtus work?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Are the payments throught the app secure?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Are there fees that Taughtus charges?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">What are the benefits of using the Taughtus app for my transactions?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">How do I send an invoice?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Can I promote my self on Taughtus?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">If I post a job, do I need to pay up-front?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">How do the deposits work?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">How do I bid on a job?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Once I've won a job, what happens</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>
+          <ion-item line>   
+              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Why is it important to give and receive reviews and ratings?</ion-label>  
+              <ion-icon name="add" class="main_color1" style="font-size: 25px;"></ion-icon>
+          </ion-item>  
+        </ion-list>  
+    </div>
+    
+    <!-- ========================= contact us -->
+    <div style="margin-top: 20px; display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: column; justify-content: space-between;  margin-top: 10px; margin-right: 20px; margin-left: 20px;">
+          <ion-label style="font-size: 20px; margin-left: 10px !important; margin-top: 5px;" class="main_color2">Contact us</ion-label>
+          <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px; margin-left: 10px; margin-right: 10px;">
+            <ion-select interface="popover" ngModel name="unit" required>
+              <ion-select-option value="0">Subject 1</ion-select-option>
+              <ion-select-option value="1">Subject 2</ion-select-option>
+              <ion-select-option value="2">Subject 3</ion-select-option>
+              <ion-select-option value="3">Subject 4</ion-select-option>
+            </ion-select>
+          </div>
+          <div style="margin-top: 30px; background: #ffffff; border: 2px solid #81ccb8; padding: 5px; margin-right: 10px; margin-left: 10px;">            
+            <ion-textarea rows="6" [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="Type here"></ion-textarea>
+          </div>
+        </div>        
+      </div>    
+      
+      <!-- //=====================================  Radio button -->
+      <div style="display: flex; flex-direction: column; align-content: center;margin-top: 20px; margin-left: 10px; margin-right: 10px;">
+          <ion-list>
+            <ion-radio-group>          
+              <ion-item lines="none">
+                <div style="display: flex; flex-direction: column; align-content: space-around;">
+                  <ion-label style="color: #007278;">Message the reply on Taughtus</ion-label>
+                </div>
+                <ion-radio slot="start" value="biff" checked></ion-radio>
+              </ion-item>
+          
+              <ion-item lines="none">
+                <div style="display: flex; flex-direction: column; align-content: space-around;">
+                  <ion-label style="color: #007278;">Email me the reply at this email address:</ion-label>
+                </div>
+                <ion-radio slot="start" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+      </div>
+
+      <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px; margin-left: 30px; margin-right: 30px;">            
+        <ion-input [(ngModel)]="com_address" autofocus="true" type="text" ngModel required placeholder="[Auto-fill user's email address]">
+        </ion-input>  
+      </div>
+      <div style="display: flex;flex-direction: column; margin: 20px;">
+        <ion-button class="round-btn" style="margin-left: 10px; margin-right: 10px;font-size: 15px; height: 50px;">Contact us</ion-button>        
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center; font-size: 12px; margin-left: 40px; margin-right: 40px; margin-bottom: 20px;">
+        <ion-label style="color: gray;">
+            Taughtus will endeavour to answer your message ASAP. 
+            You should hear back from us with-in 5 business days. 
+            Alternatively, we have also included FAQs at the top of 
+            this page to answer commonly asked questions.
+        </ion-label>
+      </div>
+</ion-content>

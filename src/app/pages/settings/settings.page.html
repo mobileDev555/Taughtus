@@ -1,10 +1,14 @@
 <ion-header>
     <ion-toolbar>
-      <!-- =============================== arrow and love icon -->
-      <div style="display: flex; flex-direction: row; justify-content: center; padding: 15px;" class="main_color">
-        <ion-icon name="arrow-back" routerLink="/tabs" style="color: #87c2c5; font-size: 30px;"></ion-icon>
-        <ion-title style="margin-left: 25% !important; font-size: 20px;">SETTINGS</ion-title>
-      </div>
+        <!-- =============================== arrow and love icon -->
+        <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+            <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+              <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+              <ion-label style="font-size: 15px;" class="main_color1">SETTINGS</ion-label>
+            </div>
+        </div>
     </ion-toolbar>
   </ion-header>
 <ion-content>

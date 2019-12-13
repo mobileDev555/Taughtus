@@ -1,0 +1,34 @@
+<ion-content>
+    <div style="display: flex; flex-direction: column; align-items: center;"> 
+        <img src="../../assets/img/logo_w.png" style="width: 50%; margin-top: 60px;margin-bottom: 40px;">
+    </div>
+    <div style="display: flex; flex-direction: column; align-content: center; background: #ffffff; width: 70%; height: 60%;margin-left: 15%; padding: 30px;"> 
+        <div style="display: flex; flex-direction: row; justify-content: flex-end;">
+          <ion-icon name="close" (click)="goback()" style="color: #004750;"></ion-icon>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 10px;">
+          <ion-label style="font-size: 30px; font-weight: bold; text-align: center;" class="main_color2">Want to send [Auto-fill name] a message?</ion-label>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px;">
+          <ion-label style="font-size: 20px; font-weight: bold; text-align: center;" class="main_color2">
+            To send a message about a specific job, enter the job here :
+          </ion-label>
+        </div>        
+        <div style="height: 50px; margin-top: 10px; background: #ffffff; border: 2px solid #81ccb8;border-radius: 30px; padding: 5px;">
+          <ion-select interface="popover" ngModel name="unit" required>
+            <ion-select-option value="0">Job 1</ion-select-option>
+            <ion-select-option value="1">Job 2</ion-select-option>
+            <ion-select-option value="2">Job 3</ion-select-option>
+            <ion-select-option value="3">Job 4</ion-select-option>
+          </ion-select>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px;">
+          <ion-label style="font-size: 20px; font-weight: bold; text-align: center;" class="main_color2">
+            or simply use the new message button below
+          </ion-label>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 40px;">
+      <ion-button class="round-btn1" routerLink="/message" style="background: #004750; border: 2px solid #ffffff; height: 50px; border-radius: 30px; margin: 10px;">New Message</ion-button>
+    </div>
+</ion-content>

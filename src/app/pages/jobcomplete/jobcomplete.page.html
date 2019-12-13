@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>jobcomplete</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div style="display: flex; flex-direction: column; align-items: center;"> 
+      <img src="../../assets/img/logo_w.png" style="width: 50%; margin-top: 60px;margin-bottom: 50px;">
+  </div>
+  <div style="display: flex; flex-direction: column; align-content: center; background: #ffffff; width: 70%; height: 60%;margin-left: 15%;"> 
+      <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px;">
+        <img *ngIf="!flag" src="../../assets/img/i_chk_fail.png">
+        <img *ngIf="flag" src="../../assets/img/i_chk_success.png">
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px; width: 60%; margin-left: 20% !important; text-align: center;">
+        <ion-label style="font-size: 30px; font-weight: bold;" class="main_color2">Have you completed this job?</ion-label>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 50px;">
+        <ion-icon name="checkmark-circle-outline" *ngIf="!flag" (click)="checkReview()" style="font-size: 60px; color: #4cc2c9; margin-right: 20px;"></ion-icon>
+        <ion-icon name="checkmark-circle" *ngIf="flag" (click)="checkReview()" style="font-size: 60px; color: #c7c94c; margin-right: 20px;"></ion-icon>
+        <ion-icon name="close-circle-outline" (click)="goback()" style="font-size: 60px; color: #4cc2c9; margin-left: 20px;"></ion-icon>
+      </div>
+  </div>
+  <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 40px;" *ngIf="flag">
+    <ion-button class="round-btn1" routerLink="/invoice" style="background: #004750; border: 2px solid #ffffff; border-radius: 30px; margin: 10px;">Send Invoice</ion-button>
+    <ion-button class="round-btn1" routerLink="/review" style="background: #004750; border: 2px solid #ffffff; border-radius: 30px; margin: 10px;">Subit Review</ion-button>
+  </div>
 </ion-content>

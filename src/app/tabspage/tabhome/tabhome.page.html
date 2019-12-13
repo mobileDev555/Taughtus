@@ -2,7 +2,7 @@
   <!-- =============================== arrow and love icon -->
     <div style="display: flex; flex-direction: column; align-content: center;" class="grey_color"> 
         <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
-          <ion-icon name="arrow-back" routerLink="/login" style="color: #ffffff; font-size: 35px;"></ion-icon>
+          <ion-icon name="arrow-back" (click)="goback()" style="color: #ffffff; font-size: 35px;"></ion-icon>
           <ion-icon name="heart-empty" style="color: #ffffff; font-size: 35px;"></ion-icon>
         </div>
         <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -40px;">
@@ -49,88 +49,89 @@
             <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; margin-top: 10px; margin-right: 20px;"></ion-icon>
         </div>
     </div>
-    
-    <!-- ===========================  my jobs -->
-    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
-        <ion-label style="font-size: 20px; margin-left: 15px;margin-top: 15px; " class="main_color1">My Jobs(1)</ion-label> 
-        <ion-list lines="none">  
-          <ion-item>     
-            <div style="display: flex; flex-direction: column; align-content: flex-start; padding-left: 15px;">   
-              <div style="display: flex; flex-direction: row;"  routerLink="/myjob">
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
-                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 2px solid #43a6b3; border-radius: 30px;">
-                    <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
-                    <ion-label style="font-size: 12px; margin-left: 10px;">Aug 6-8</ion-label>  
-                  </ion-button>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 30%;"/>
-                  <ion-button class="round-btn1" routerLink="/jobcomplete" style="border: 2px solid #43a6b3; border-radius: 30px;">
-                    <ion-label style="font-size: 12px; margin-right: 10px;">Assigned to you</ion-label>  
-                    <ion-icon name="checkmark-circle-outline" class="main_color1" style="font-size: 20px;"></ion-icon>
-                  </ion-button>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
-              </div>
 
-              <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;" routerLink="/myjob">
-                <ion-label style="font-size: 15px;" class="main_color">
-                    Title with character limit. Lorem <br>ipsum dolor sit amet, consectetur adipisicing
-                </ion-label>  
-                <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
-              </div>
-
-              <div style="display: flex; flex-direction: row; margin-top: 15px;"  routerLink="/myjob">
-                <div style="display: flex; flex-direction: row; justify-items: flex-start;">
-                    <img src="../../assets/img/i_user.png" style="margin-right: 5px; width: 40px; height: 40px;"> 
-                    <div style="display: flex; flex-direction: column; align-content: flex-start;">
-                      <ion-label style="font-size: 15px;" class="main_color1">John Doe</ion-label>
-                      <ion-label style="font-size: 12px;">@johndoe•posted 2 days ago</ion-label>
-                      <div style="display: flex; flex-direction: row; align-content: flex-start; margin-top: 10px; margin-bottom: 10px;">
-                          <ion-label style="font-size: 15px;" class="main_color1">4.2</ion-label>
-                          <ion-icon name="star" class="yellow"></ion-icon>
-                          <ion-icon name="star" class="yellow"></ion-icon>
-                          <ion-icon name="star" class="yellow"></ion-icon>
-                          <ion-icon name="star" class="yellow"></ion-icon>
-                          <ion-icon name="star" class="green_grey"></ion-icon>
-                      </div>
-                    </div>
-                </div>
-                <div style="display: flex; flex-direction: column; align-content: flex-start; margin-left: 20px;">
-                    <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
-                        <ion-icon name="pin" class="main_color" style="font-size: 20px;"></ion-icon>
-                        <ion-label style="font-size: 12px; margin-top: 3px; margin-left: 5px !important;" class="main_color1">London, UK</ion-label>
-                    </div>
-                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
-                        <ion-icon name="pricetag" class="main_color" style="font-size: 20px;"></ion-icon>
-                        <ion-label style="font-size: 12px; margin-left: 5px !important;" class="main_color1">Marketing <br/>Email marketing</ion-label>
-                    </div>
-                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
-                        <ion-label style="font-size: 12px; margin-left: 15px;" class="grey_color">JOB0003</ion-label>
-                    </div>
-                </div>                
-              </div>
-              
-              <div style="display: flex; flex-direction: row; justify-content: center;">
-                <ion-button class="round-btn1" routerLink="/message" style="border: 2px solid #43a6b3; border-radius: 30px;margin-left: 20px; margin-right: 20px;">Message</ion-button>
-                <ion-button class="round-btn1" routerLink="/invoice" style="border: 2px solid #43a6b3; border-radius: 30px;margin-left: 20px; margin-right: 20px;">Send Invice</ion-button>
-              </div>
+  <!-- ===========================  my jobs -->
+  <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
+      <ion-label style="font-size: 20px; margin-left: 15px;margin-top: 15px; " class="main_color1">My Jobs(1)</ion-label> 
+      <ion-list lines="none">  
+        <ion-item>     
+          <div style="display: flex; flex-direction: column; align-content: flex-start; width: 100%;">   
+            <div style="display: flex; flex-direction: row;">
+                <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 5%;"/>
+                <ion-button class="round-btn1" routerLink="/myjob" style="border: 1px solid #43a6b3; border-radius: 30px;">
+                  <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+                  <ion-label style="font-size: 10px; margin-left: 10px;">Aug 6-8</ion-label>  
+                </ion-button>
+                <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 20%;"/>
+                <ion-button class="round-btn1" routerLink="/jobcomplete" style="border: 1px solid #43a6b3; border-radius: 30px; width: 160px;">
+                  <ion-label style="font-size: 10px; margin-right: 10px;">Assigned to you</ion-label>  
+                  <img src="../../../assets/img/circle_unchk.png" style="margin-right: -15px;"/>
+                  <!-- <ion-icon name="checkmark-circle-outline" class="main_color1" style="font-size: 30px;"></ion-icon> -->
+                </ion-button>
+                <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 5%;"/>
             </div>
-          </ion-item>  
-        </ion-list>  
+  
+            <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;" routerLink="/myjob">
+              <ion-label style="font-size: 15px;" class="main_color">
+                  Title with character limit. Lorem <br>ipsum dolor sit amet, consectetur adipisicing
+              </ion-label>  
+              <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
+            </div>
+  
+            <div style="display: flex; flex-direction: row; margin-top: 15px;" routerLink="/myjob">
+              <div style="display: flex; flex-direction: row; justify-items: flex-start;">
+                  <img src="../../assets/img/i_user.png" style="margin-right: 5px; width: 40px; height: 40px;"> 
+                  <div style="display: flex; flex-direction: column; align-content: flex-start;">
+                    <ion-label style="font-size: 15px;" class="main_color1">John Doe</ion-label>
+                    <ion-label style="font-size: 12px;">@johndoe•posted 2 days ago</ion-label>
+                    <div style="display: flex; flex-direction: row; align-content: flex-start; margin-top: 10px; margin-bottom: 10px;">
+                        <ion-label style="font-size: 15px;" class="main_color1">4.2</ion-label>
+                        <ion-icon name="star" class="yellow"></ion-icon>
+                        <ion-icon name="star" class="yellow"></ion-icon>
+                        <ion-icon name="star" class="yellow"></ion-icon>
+                        <ion-icon name="star" class="yellow"></ion-icon>
+                        <ion-icon name="star" class="green_grey"></ion-icon>
+                    </div>
+                  </div>
+              </div>
+              <div style="display: flex; flex-direction: column; align-content: flex-start; margin-left: 20px;">
+                  <div style="display: flex; flex-direction: row; align-content: flex-start;margin-bottom: 5px;">
+                      <ion-icon name="pin" class="main_color" style="font-size: 20px;"></ion-icon>
+                      <ion-label style="font-size: 12px; margin-top: 3px; margin-left: 5px !important;" class="main_color1">London, UK</ion-label>
+                  </div>
+                  <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                      <ion-icon name="pricetag" class="main_color" style="font-size: 20px;"></ion-icon>
+                      <ion-label style="font-size: 12px; margin-left: 5px !important;" class="main_color1">Marketing <br/>Email marketing</ion-label>
+                  </div>
+                  <div style="display: flex; flex-direction: row; align-content: flex-start; margin-bottom: 10px;">
+                      <ion-label style="font-size: 12px; margin-left: 15px;" class="grey_color">JOB0003</ion-label>
+                  </div>
+              </div>                
+            </div>
+            
+            <div style="display: flex; flex-direction: row; justify-content: center;">
+              <ion-button class="round-btn1" routerLink="/message" style="border: 2px solid #43a6b3; border-radius: 30px;margin-left: 20px; margin-right: 20px;">Message</ion-button>
+              <ion-button class="round-btn1" routerLink="/invoice" style="border: 2px solid #43a6b3; border-radius: 30px;margin-left: 20px; margin-right: 20px;">Send Invice</ion-button>
+            </div>
+          </div>
+        </ion-item>  
+      </ion-list>  
     </div>
     <!-- ===========================  recommended gigs -->
     <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
         <ion-label style="font-size: 20px; margin-left: 15px;margin-top: 15px; " class="main_color1">Recommended gigs(12)</ion-label> 
         <ion-list lines="none">  
           <ion-item routerLink="/jobtraining">     
-            <div style="display: flex; flex-direction: column; align-content: flex-start; padding-left: 15px;">   
-              <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
-                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 2px solid #43a6b3; border-radius: 30px;">
+            <div style="display: flex; flex-direction: column; align-content: flex-start; width: 100%;">   
+              <div style="display: flex; flex-direction: row;">
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 10%;"/>
+                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 1px solid #43a6b3; border-radius: 30px;">
                     <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
                     <ion-label style="font-size: 12px; margin-left: 10px;">Aug 6-8</ion-label>  
                   </ion-button>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 80%;"/>
-                  <ion-icon name="bookmark" class="main_color1" style="font-size: 35px;"></ion-icon>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 80%;"/>
+                  <ion-icon name="bookmark" class="main_color1" style="font-size: 30px;"></ion-icon>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 10%;"/>
               </div>
 
               <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;">
@@ -183,16 +184,16 @@
         <ion-label style="font-size: 20px; margin-left: 15px;margin-top: 15px; " class="main_color1">Saved jobs(2)</ion-label> 
         <ion-list lines="none">  
           <ion-item>     
-            <div style="display: flex; flex-direction: column; align-content: flex-start; padding-left: 15px;">   
-              <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
-                  <ion-button class="round-btn1" routerLink="/register1" style="border: 2px solid #43a6b3; border-radius: 30px;">
+            <div style="display: flex; flex-direction: column; align-content: flex-start; width: 100%;">   
+              <div style="display: flex; flex-direction: row;">
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 10%;"/>
+                  <ion-button class="round-btn1" routerLink="/myjob" style="border: 1px solid #43a6b3; border-radius: 30px;">
                     <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
                     <ion-label style="font-size: 12px; margin-left: 10px;">Aug 6-8</ion-label>  
                   </ion-button>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 80%;"/>
-                  <ion-icon name="bookmark" class="main_color1" style="font-size: 35px;"></ion-icon>
-                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 2px; width: 10%;"/>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 80%;"/>
+                  <ion-icon name="bookmark" class="main_color1" style="font-size: 30px;"></ion-icon>
+                  <img class="main_color1" style="margin-top: 16px; background: #43a6b3; height: 1px; width: 10%;"/>
               </div>
 
               <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 10px;">
@@ -241,28 +242,28 @@
         </ion-list>  
     </div>
     <!-- ===========================  My tools -->
-    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px;"> 
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff; margin-top: 10px; margin-right: 20px;"> 
         <ion-label style="font-size: 20px; margin-left: 15px; margin-top: 15px; " class="main_color1">My tools</ion-label> 
         <ion-list>  
-          <ion-item line>   
-              <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">My bids</ion-label>  
-              <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          <ion-item line routerLink="/mybid">   
+              <ion-label style="font-size: 15px; padding-left: 10px;" class="main_color1">My bids</ion-label>  
+              <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
           </ion-item>  
-          <ion-item line>   
-            <ion-label style="font-size: 15px; margin-left: 10px;margin-right: 10px;" class="main_color1">Payments</ion-label>    
-            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          <ion-item line routerLink="/payment">   
+            <ion-label style="font-size: 15px; padding-left: 10px;" class="main_color1">Payments</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
           </ion-item>  
-          <ion-item line>   
-            <ion-label style="font-size: 15px; margin-left: 10px; margin-right: 10px; " class="main_color1">Invoices</ion-label>    
-            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          <ion-item line routerLink="/invoice">   
+            <ion-label style="font-size: 15px; padding-left: 10px;" class="main_color1">Invoices</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
           </ion-item>  
-          <ion-item line>   
-            <ion-label style="font-size: 15px; margin-left: 10px; margin-right: 10px; " class="main_color1">Canlendar</ion-label>    
-            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          <ion-item line routerLink="/calendar">   
+            <ion-label style="font-size: 15px; padding-left: 10px;" class="main_color1">Canlendar</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
           </ion-item>  
-          <ion-item line>   
-            <ion-label style="font-size: 15px; margin-left: 10px; margin-right: 10px; " class="main_color1">Completed jobs</ion-label>    
-            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+          <ion-item line routerLink="/myjob">   
+            <ion-label style="font-size: 15px; padding-left: 10px;" class="main_color1">Completed jobs</ion-label>    
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px;"></ion-icon>
           </ion-item>  
         </ion-list>  
     </div>

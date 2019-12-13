@@ -1,9 +1,134 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>tabmsg</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <!-- =============================== arrow and love icon -->
+          <div style="display: flex; flex-direction: column; align-content: center; padding-bottom: 20px;background: #f1f1f0;"> 
+              <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+                <ion-icon name="arrow-back" (click)="goback()" style="font-size: 25px;" class="main_color2"></ion-icon>
+                <ion-icon name="person" style="font-size: 25px;" routerLink="/phonebook" class="main_color2"></ion-icon>
+              </div>
+              <div style="display: flex; flex-direction: row; justify-content: center;margin-top: -35px;">
+                <ion-label style="font-size: 15px;" class="main_color1">MESSAGES</ion-label>
+              </div>
+          </div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <!-- ========================= search box -->
+    <div style="display: flex; flex-direction: row; margin: 20px; border: 1px solid #43a6b3; border-radius: 20px;font-size: 12px;">
+      <ion-input placeholder="Search by name or subject">
+      </ion-input>         
+      <ion-icon name="search" style="font-size: 25px; margin-right: 10px; margin-top: 5px;" class="main_color2"></ion-icon>
+    </div>
+    <!-- ======================= user(greg) -->
+    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row;">
+        <img src="../../assets/img/i_user.png" style="margin-right: 15px; width: 40px; height: 40px;"> 
+        <div style="display: flex; flex-direction: column; align-content: flex-start; margin-top: 5px;">
+          <ion-label style="font-size: 15px;" class="main_color1">Greg Samuels</ion-label>
+          <ion-label style="font-size: 12px;">London, UK</ion-label>
+        </div>
+      </div>
+      <ion-icon name="add" style="font-size: 25px; margin-top: 10px;" class="main_color2" routerLink="/confirmmsg"></ion-icon>
+    </div>    
+    <!-- ===========================  Greg samuel -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff;">  
+      <ion-list>  
+        <ion-item line routerLink="/enquiry">     
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+      </ion-list>  
+    </div>
+    <!-- ======================= user(john) -->
+    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row;">
+        <img src="../../assets/img/i_user.png" style="margin-right: 15px; width: 40px; height: 40px;"> 
+        <div style="display: flex; flex-direction: column; align-content: flex-start; margin-top: 5px;">
+          <ion-label style="font-size: 15px;" class="main_color1">John Doe</ion-label>
+          <ion-label style="font-size: 12px;">San Francisco, US</ion-label>
+        </div>
+      </div>
+      <ion-icon name="add" style="font-size: 25px; margin-top: 10px;" class="main_color2" routerLink="/confirmmsg"></ion-icon>
+    </div>    
+    <!-- ===========================  john -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff;">  
+      <ion-list>  
+        <ion-item line routerLink="/enquiry">     
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+      </ion-list>  
+    </div>
+    <!-- ======================= user(vachon) -->
+    <div style="display: flex; flex-direction: row; justify-content: space-between; margin-left: 20px; margin-right: 20px; margin-top: 20px;">
+      <div style="display: flex; flex-direction: row;">
+        <img src="../../assets/img/i_user.png" style="margin-right: 15px; width: 40px; height: 40px;"> 
+        <div style="display: flex; flex-direction: column; align-content: flex-start; margin-top: 5px;">
+          <ion-label style="font-size: 15px;" class="main_color1">Stephanie Vachon</ion-label>
+          <ion-label style="font-size: 12px;">Sydney, AU</ion-label>
+        </div>
+      </div>
+      <ion-icon name="add" style="font-size: 25px; margin-top: 10px;" class="main_color2" routerLink="/confirmmsg"></ion-icon>
+    </div>    
+    <!-- ===========================  vachon -->
+    <div style="display: flex; flex-direction: column; align-content: center;background:  #ffffff;">  
+      <ion-list>  
+        <ion-item line routerLink="/enquiry">     
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+        <ion-item line routerLink="/enquiry">   
+            <ion-icon name="calendar" class="main_color1" style="font-size: 20px;"></ion-icon>
+            <ion-label style="font-size: 12px; margin-left: 5px;margin-right: 0px;" class="main_color1">
+              12/03/19<span style="font-size: 15px; margin-left: 10px;" class="main_color">JOB00034 Marketing/Email marketing</span>
+            </ion-label>  
+            <ion-icon name="arrow-dropright" class="main_color1" style="font-size: 25px; float:right !important;"></ion-icon>
+        </ion-item>  
+      </ion-list>  
+    </div>
 </ion-content>
